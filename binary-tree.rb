@@ -40,7 +40,6 @@ def build_tree(array)
         lbound = node if node.value < lbound.value
         if node.right==nil && x >= node.value && node.value > largest_valid.value
           largest_valid = node
-          #node.right = tree.nodes[count-1]
         end
         i += 1
       end
@@ -62,7 +61,6 @@ def breadth_first_search(tree, value)
     break if queue == []
     queue << queue[0].left unless queue[0].left == nil
     queue << queue[0].right unless queue[0].right == nil
-    break if queue.length <= 1 && queue[0] == nil
   end
   queue[0]
 end
